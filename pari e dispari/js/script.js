@@ -34,6 +34,14 @@ const result = check(total);
 console.log(result);
 
 // decisione della vittora
+let winners = "";
+
+if (result === userChoice.toLocaleLowerCase()) {
+    winners = "Ha vinto l'utente"
+} else {
+    winners = "Ha vinto il computer"
+}
+console.log(winners);
 
 
 
@@ -52,7 +60,7 @@ function getRndInteger(min, max) {
 
 function check (win) {
     let message = "";
-    if (total % 2 === 0 && total % 3 === 0) {
+    if (total % 2 === 0) {
         message = "il numero è pari";
     } else {
         message = "il numero è dispari";
